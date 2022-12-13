@@ -1,73 +1,7 @@
-//primera entrega
-// variables
-// let i = 0;
-// let cantCompra = parseInt(prompt("Ingrese la cantidad de articulos comprados"));
-// let precioTotalCesped = 0;
-// let precioTotalArena = 0;
-// let precioTotalCaucho = 0;
-// let subtotal = 0;
-// let cSubtotal = 0;
-// let cTotal = 0;
 
-// function Producto(nombre, precio) {
-//   this.nombre = nombre;
-//   this.precio = precio;
-// }
-
-// const producto1 = new Producto("cespes sintetico", 1000);
-// const producto2 = new Producto("arena", 300);
-// const producto3 = new Producto("caucho", 500);
-// alert(producto1.nombre + producto1.precio);
-
-// // funciones y ciclo
-
-//  while (i < cantCompra) {
-//    i++;
-//    let articulo = prompt(`eliga el articulo:
-//  1:cesped
-//  2:arena
-//  3:caucho`);
-//    let cantidadTotal = parseInt(prompt("Ingrese la cantidad"));
-//    let precioUnitario = parseInt(prompt("Ingrese el precio"));
-//    let condicionIva = parseInt(prompt(
-//      `ingrese 1 si su condicion es iva responsable inscripto o 2 si es excento`
-//    ));
-
-//    function calcularArticulo() {
-//      switch (articulo) {
-//        case "1":
-//          alert(producto1.nombre + producto1.precio);
-//          precioTotalCesped = cantidadTotal * precioUnitario;
-//          break;
-//        case "2":
-//          precioTotalArena = cantidadTotal * precioUnitario;
-//          break;
-//        case "3":
-//          precioTotalCaucho = cantidadTotal * precioUnitario;
-//          break;
-//        default:
-//          alert("no asignaron ningun articulo");
-//          break;
-//      }
-//      subtotal = precioTotalArena + precioTotalCaucho + precioTotalCesped;
-//      cSubtotal = cSubtotal + subtotal;
-//      return cSubtotal;
-//    }
-
-//    function calcularIva(cSubtotal) {
-//      if (condicionIva == "1") {
-//        cTotal = cTotal + cSubtotal + subtotal * 0.21;
-//        return cTotal;
-//      } else {
-//        return cTotal;
-//      }
-//    }
-//  }
-
-//  alert("El subtotal de la compra es de de: " + calcularArticulo());
-//  alert("El total de la compra es de: " + calcularIva(subtotal));
 let numero = [];
 let confirmacion = 0
+
 //objeto
 function Promociones(promo, precio) {
   this.promo = promo;
