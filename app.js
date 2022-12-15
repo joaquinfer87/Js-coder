@@ -25,7 +25,7 @@ function pedido() {
     case "1":
       subtotal = promocion1.precio
       alert(promocion1.promo + " El precio es de " + promocion1.precio);
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 10; i++) {
         let x = [prompt("ingrese los numeros del catalogo")];
         console.log("Stikcer numero " + x);
         numero[i] = x + " ";
@@ -43,7 +43,7 @@ function pedido() {
     case "2":
       subtotal = promocion2.precio
       alert(promocion2.promo + " El precio es de " + promocion2.precio);
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 15; i++) {
         let x = [prompt("ingrese los numeros del catalogo")];
         console.log("Stikcer numero " + x);
         numero[i] = x + " ";
@@ -60,7 +60,7 @@ function pedido() {
       break;
     case "3":
       subtotal = promocion3.precio
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 20; i++) {
         let x = [prompt("ingrese los numeros del catalogo")];
         console.log("Stikcer numero " + x);
         numero[i] = x + " ";
