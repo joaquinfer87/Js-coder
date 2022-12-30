@@ -98,3 +98,12 @@
 // const producto1 = new Producto("cespes sintetico", 1000, "Limonta", "Canchas deportivas, decoracion", );
 // const producto2 = new Producto("arena", 300, "arenita","Mantenimiento cancha hockey" );
 // const producto3 = new Producto("caucho", 500, "ecocaucho", "Mantenimiento cancha de futbol");
+
+//clase 8
+//METODO TRADICIONAL 
+ 
+let nav = document.querySelector (".main_header_nav")
+let lista = document.querySelector ("ul")
+console.log(lista)
+
+let nuevoBoton

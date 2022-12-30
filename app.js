@@ -80,6 +80,12 @@ function pedido() {
       pedido();
       break;
   }
+  let listaVacia = document.querySelector("#carrito")
+      for (let a of x ) {
+        let lista = document.createElement ("li")
+        lista.innerHTML = a 
+        listaVacia.appendChild("lista")
+      }
 }
 pedido();
 
