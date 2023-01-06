@@ -99,29 +99,39 @@
 // const producto2 = new Producto("arena", 300, "arenita","Mantenimiento cancha hockey" );
 // const producto3 = new Producto("caucho", 500, "ecocaucho", "Mantenimiento cancha de futbol");
 
-
-
 //clase 7
 
 numero.forEach((s, n) => {
-    console.log("Los stickers elegidos son: ` ${p} : ${n}`");
+  console.log("Los stickers elegidos son: ` ${p} : ${n}`");
 });
 
 numero.map((s, n) => {
-    console.log("Los stickers elegidos son: ` ${p} : ${n}`");
+  console.log("Los stickers elegidos son: ` ${p} : ${n}`");
 });
 
-let filtro = promociones.filter((i)=> i.nombre === "Marte" || i.precio < 1000)
+let filtro = promociones.filter((i) => i.nombre === "Marte" || i.precio < 1000);
 
-console.log (filtro)
-
+console.log(filtro);
 
 //clase 8
-//METODO TRADICIONAL 
- 
-let nav = document.querySelector (".main_header_nav")
-let lista = document.querySelector ("ul")
-console.log(lista)
+//METODO TRADICIONAL
 
+let nav = document.querySelector(".main_header_nav");
+let lista = document.querySelector("ul");
+console.log(lista);
 
+// let listaVacia = document.querySelector("#carrito")
+//     for (let a of x ) {
+//       let lista = document.createElement ("li")
+//       lista.innerHTML = a
+//       listaVacia.appendChild("lista")
+//     }
 
+//clase 9
+nuevoBoton.onclick = function () {
+  console.log("hello");
+};
+nuevoBoton.addEventListener ( "click", function () {
+    console.log("hello");
+  })
+  

@@ -2,6 +2,13 @@ let numero = [];
 let confirmacion = 0;
 let subtotal = 0;
 let total = 0;
+let nuevoBoton = document.createElement("button");
+
+//agrego un boton al html
+nuevoBoton.setAttribute("class", "btn");
+nuevoBoton.setAttribute("id", "btnCompra");
+nuevoBoton.textContent = "Agregar al carrito";
+document.querySelector("#carrito").appendChild(nuevoBoton);
 
 //objeto
 function Promociones(promo, precio) {
@@ -11,21 +18,31 @@ function Promociones(promo, precio) {
 
 //creacion de las promociones
 const promociones = [
-  {nombre: "Marte", precio: 500 },
-  {nombre: "Saturno", precio: 750 },
-  {nombre: "via lactea", precio: 1000 }
-]
+  { nombre: "Marte", precio: 500 },
+  { nombre: "Saturno", precio: 750 },
+  { nombre: "via lactea", precio: 1000 },
+];
 
 const promocion1 = new Promociones("Marte", 500);
 const promocion2 = new Promociones("Saturno", 750);
 const promocion3 = new Promociones("Via Lactea", 1000);
 
+const filtrarProducto = () => {
+  let cantidad = inputText.value;
+  console.log(cantidad);
+  pedido()
+};
+
+inputSearch.addEventListener("search", filtrarProducto)
+  
+
+
 //realizar pedido
 function pedido() {
-  let cantidad = prompt(`eliga la promocion:
-  1: Marte 10 stickers
-  2: Saturno 15 Stickers
-  3: Via Lactea 20 Stickers`);
+  // let cantidad = prompt(`eliga la promocion:
+  //  1: Marte 10 stickers
+  //  2: Saturno 15 Stickers
+  //  3: Via Lactea 20 Stickers`);
 
   switch (cantidad) {
     case "1":
@@ -39,8 +56,8 @@ function pedido() {
         "Escriba ok si confirma el pedido, si desea hacerlo de nuevo ingrese nuevo"
       );
       if (confirmacion == "ok") {
-        ordenar = numero.sort()
-        console.log(ordenar)
+        ordenar = numero.sort();
+        console.log(ordenar);
         alert("Los stickers elegidos son: " + numero);
         alert("Su total es de: $" + promocion1.precio);
       } else {
@@ -58,8 +75,8 @@ function pedido() {
         "Escriba ok si confirma el pedido, si desea hacerlo de nuevo ingrese nuevo"
       );
       if (confirmacion == "ok") {
-        ordenar = numero.sort()
-        console.log(ordenar)
+        ordenar = numero.sort();
+        console.log(ordenar);
         alert("Los stickers elegidos son: " + numero);
         alert("Su total es de: $" + promocion2.precio);
       } else {
@@ -76,8 +93,8 @@ function pedido() {
         "Escriba ok si confirma el pedido, si desea hacerlo de nuevo ingrese nuevo"
       );
       if (confirmacion == "ok") {
-        ordenar = numero.sort()
-        console.log(ordenar)
+        ordenar = numero.sort();
+        console.log(ordenar);
         alert("Los stickers elegidos son: " + numero);
         alert("Su total es de: $" + promocion3.precio);
       } else {
@@ -89,14 +106,8 @@ function pedido() {
       pedido();
       break;
   }
-  // let listaVacia = document.querySelector("#carrito")
-  //     for (let a of x ) {
-  //       let lista = document.createElement ("li")
-  //       lista.innerHTML = a
-  //       listaVacia.appendChild("lista")
-  //     }
 }
-pedido();
+
 
 //descuento
 function descuento() {
@@ -124,9 +135,13 @@ function pagar() {
 }
 pagar();
 
-let nuevoBoton = document.createElement("button");
-nuevoBoton.setAttribute("class", "btn");
-nuevoBoton.setAttribute("id", "btnCompra");
-nuevoBoton.textContent = "Agregar al carrito";
 
-document.querySelector("#carrito").appendChild(nuevoBoton);
+
+let listaVacia = document.querySelector("#carrito_compra");
+
+for (let n of numero) {
+  let listado = document.createElement("li");
+  listado.innerHTML = n;
+  listaVacia.appendChild(listado);
+}
+
