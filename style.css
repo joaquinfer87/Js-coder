@@ -3,20 +3,20 @@
   padding: 0; }
 @font-face {
   font-family: "retropix";
-  src: url(../fonts/retropix.otf); }
+  src: url(./fonts/retropix.otf); }
 @font-face {
   font-family: "openSansRegular";
-  src: url(../fonts/OpenSans-Regular.ttf); }
+  src: url(./fonts/OpenSans-Regular.ttf); }
 @font-face {
   font-family: "openSansBold";
-  src: url(../fonts/OpenSans-Bold.ttf);
+  src: url(./fonts/OpenSans-Bold.ttf);
   font-weight: bold; }
 body {
   width: 100vw; }
 li {
   list-style: none; }
 .main_principal {
-  background-image: url(../img/stars-svgrepo-com.svg);
+  background-image: url(./img/stars-svgrepo-com.svg);
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -24,7 +24,7 @@ li {
   padding-bottom: 100px; }
   .main_header {
     width: 100vw;
-    background-image: url(../img/navfondo.png);
+    background-image: url(./img/navfondo.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -77,7 +77,7 @@ li {
   width: 100vw;
   flex-direction: column; }
 .main_principal_presentacion {
-  background-image: url(../img/navfondo.png);
+  background-image: url(./img/navfondo.png);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -109,11 +109,11 @@ li {
 .main_principal_catalogos {
   height: 100%;
   display: grid;
-  grid-template-areas: "title title" "card-01 card-02";
-  grid-template-rows: auto auto;
+  grid-template-areas: "title title" "card-01 card-02" "carrito carrito";
+  grid-template-rows: auto auto auto;
   grid-template-columns: auto auto;
   justify-items: center;
-  gap: 80px 40px;
+  gap: 80px 40px ;
   padding: 200px 40px 100px; }
 .main_principal_catalogos_titulo {
   font-size: 30px;
@@ -203,7 +203,7 @@ a {
   border-style: solid;
   border-color: #7947d6; }
 footer {
-  background-image: url(../img/navfondo.png);
+  background-image: url(./img/navfondo.png);
   background-size: cover;
   color: white;
   background-repeat: no-repeat;
@@ -224,3 +224,17 @@ footer li {
 .footer_ig {
   width: 30px;
   height: 30px; } 
+
+
+
+.carro{
+  font-size: 30px;
+  font-family: "openSansBold";
+  color: #7947d6;
+  font-weight: bold;
+  grid-area: carrito;
+  width: 100%;
+  text-align: center;
+}
+
+  

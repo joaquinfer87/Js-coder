@@ -99,6 +99,23 @@
 // const producto2 = new Producto("arena", 300, "arenita","Mantenimiento cancha hockey" );
 // const producto3 = new Producto("caucho", 500, "ecocaucho", "Mantenimiento cancha de futbol");
 
+
+
+//clase 7
+
+numero.forEach((s, n) => {
+    console.log("Los stickers elegidos son: ` ${p} : ${n}`");
+});
+
+numero.map((s, n) => {
+    console.log("Los stickers elegidos son: ` ${p} : ${n}`");
+});
+
+let filtro = promociones.filter((i)=> i.nombre === "Marte" || i.precio < 1000)
+
+console.log (filtro)
+
+
 //clase 8
 //METODO TRADICIONAL 
  
@@ -106,4 +123,5 @@ let nav = document.querySelector (".main_header_nav")
 let lista = document.querySelector ("ul")
 console.log(lista)
 
-let nuevoBoton
+
+
