@@ -35,27 +35,44 @@ function leerDatosProducto(producto) {
   const infoProducto = {
     promocion: producto.querySelector(".card-title").textContent,
     precio: producto.querySelector(".precio").textContent,
+    id: producto.querySelector(".btn").getAttribute("data-id"),
   };
   console.log(infoProducto);
 
   articulosCarrito = [...articulosCarrito, infoProducto];
-  carritoHTML();
+  carritoCompras();
 }
 
 const carrito = document.querySelector("#carrito");
 
-function carritoHTML() {
-  
+function carritoCompras() {
+  limpiarHTML();
   articulosCarrito.forEach((producto) => {
-    const row = document.createElement("p");
-    row.innerHTML = `
+    const sumar = document.createElement("p");
+    sumar.innerHTML = `
+  <div class="mi_carrito">
   <h5 class="desc">${producto.promocion}</h5>
   <h5 class="pre">${producto.precio}</h5>
-  <button class="btn btn-dark x" ><h5 class="text-danger">X</h5></button>
+  <button class="btn btn-dark "  id="${producto.id}"><h5>X</h5></button>
   </div>
   </div>
   `;
-    carrito.appendChild(row);
+    carrito.appendChild(sumar);
   });
 }
 
+function limpiarHTML() {
+  carrito.innerHTML = "";
+}
+
+carrito.addEventListener("click", eliminarProducto);
+
+function eliminarProducto(e) {
+  if (e.target.classList.contains("btn-dark")) {
+    let productoID = e.target.getAttribute("id");
+    articulosCarrito = articulosCarrito.filter(
+      (producto) => producto.id != productoID
+    );
+    carritoCompras();
+  }
+}
