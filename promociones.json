@@ -1,0 +1,22 @@
+[
+  {
+    "promocion": "campeones",
+    "precio": 450
+  },
+  {
+    "promocion": "disney",
+    "precio": 450
+  },
+  {
+    "promocion": "argentina",
+    "precio": 450
+  },
+  {
+    "promocion": "harry",
+    "precio": 450
+  },
+  {
+    "promocion": "coldplay",
+    "precio": 450
+  }
+]
