@@ -23,7 +23,7 @@
               <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav me-auto">
                   <li class="nav-item">
-                    <a class="nav-link active" href="./home.html">Inicio
+                    <a class="nav-link active" href="./index.html">Inicio
                       <span class="visually-hidden">(current)</span>
                     </a>
                   </li>
@@ -32,7 +32,7 @@
                   </li>
                 </ul>
                 <form class="d-flex">
-                  <button class="btn btn-secondary my-2 my-sm-0" type="submit"><img src="../imagenes/Sin título-1.png" alt="carrito de COMPRAS" width="40" height="40"></button>
+                  <button class="carro"><img src="../imagenes/Sin título-1.png" alt="carrito de COMPRAS" width="40" height="40"></button>
                 </form>
               </div>
             </div>
@@ -73,66 +73,67 @@
             <h2>Promos</h2>
           </div>  
           <div class="promociones">
-            <div class="card text-white bg-primary mb-3 card1" style="max-width: 20rem;">
-              <div class="card-header"><h4 class="card-title"> CAMPEONES  </h4></div>
-              <div class="card-body">
-                <h5>$450</h5>
-                <img src="./imagenes/campeones.png" alt="" width="300" height="400">
-                <button type="button" class="btn btn-secondary">COMPRAR</button>
+              <div class="card bg-primary mb-3 card1" style="max-width: 20rem;">
+                <div class="card-body">
+                  <h4 class="card-title" >CAMPEONES</h4>
+                  <h5 class="precio">$450</h5>
+                  <img src="./imagenes/campeones.png" alt="" width="300" height="400">
+                <button type="button" class="btn btn-secondary" data-id="1">COMPRAR</button>
+                </div>
               </div>
-            </div>
-            <div class="card text-white bg-secondary mb-3 card2" style="max-width: 20rem;">
-              <div class="card-header"><h4 class="card-title">  DISNEY </h4></div>
-              <div class="card-body">
-                <h5>$450</h5>
-                <img src="./imagenes/disney.png" alt="" width="300" height="400">
-                <button type="button" class="btn btn-primary">COMPRAR</button>
+              <div class="card text-white bg-secondary mb-3 card2" style="max-width: 20rem;">
+                <div class="card-body">
+                  <h4 class="card-title">DISNEY</h4>
+                  <h5 class="precio">$450</h5>
+                  <img src="./imagenes/disney.png" alt="" width="300" height="400">
+                  <button type="button" class="btn btn-primary"  >COMPRAR</button>
+                </div>
               </div>
-            </div>
-            <div class="card text-white bg-success mb-3 card3" style="max-width: 20rem;">
-              <div class="card-header"><h4 class="card-title"> ARGENTINA</h4></div>
-              <div class="card-body">
-                <h5>$450</h5>
-                <img src="./imagenes/argentina.png" alt="" width="300" height="400">
-                <button type="button" class="btn btn-info">COMPRAR</button>
-              </div>
-            </div>
-            <div class="card text-white bg-info mb-3 card4" style="max-width: 20rem;">
-              <div class="card-header"><h4 class="card-title">  HARRY STYLE </h4></div>
-              <div class="card-body">
-                <h5>$450</h5>
-                <img src="./imagenes/harry.png" alt="" width="300" height="400">
-                <button type="button" class="btn btn-success">COMPRAR</button>
-              </div>
-            </div>
-            <div class="card text-white bg-warning mb-3 card5" style="max-width: 20rem;">
-              <div class="card-header"><h4 class="card-title">COLDPAY</h4></div>
-              <div class="card-body">
-                <h5>$450</h5>
-                <img src="./imagenes/coldplay.png" alt="" width="300" height="400">
-                <button type="button" class="btn btn-danger">COMPRAR</button>
-              </div>
-            </div>
-            <div class="card text-white bg-danger mb-3 card6" style="max-width: 20rem;">
-              <div class="card-header"><h4 class="card-title">PERSONALIZADOS</h4></div>
-              <div class="card-body">
-                <h5>Consulta los precios</h5>
-                <img src="./imagenes/sitckers.png" alt="" width="300" height="400">
-                <button type="button" class="btn btn-warning">CHAT</button>
-              </div>
-            </div>
-          </div>
+              <div class="card text-white bg-warning mb-3 card3" style="max-width: 20rem;">
+                <div class="card-body">
+                  <h4 class="card-title">ARGENTINA</h4>
+                  <h5 class="precio">$450</h5>
+                  <img src="./imagenes/argentina.png" alt="" width="300" height="400">
+                  <button type="button" class="btn btn-danger"  >COMPRAR</button>
+                </div>
+              </div>              
+              <div class="card text-white bg-danger mb-3 card4" style="max-width: 20rem;">
+                <div class="card-body">
+                  <h4 class="card-title">HARRY</h4>
+                  <h5 class="precio">$450</h5>
+                  <img src="./imagenes/harry.png" alt="" width="300" height="400">
+                  <button type="button" class="btn btn-warning"  >COMPRAR</button>
+                </div>
+              </div>              
+              <div class="card text-white bg-success mb-3 card5" style="max-width: 20rem;">
+                <div class="card-body">
+                  <h4 class="card-title">COLDPLAY</h4>
+                  <h5 class="precio">$450</h5>
+                  <img src="./imagenes/coldplay.png" alt="" width="300" height="400">
+                  <button type="button" class="btn btn-info">COMPRAR</button>
+                </div>
+              </div>              
+              <div class="card text-white bg-info mb-3 card6" style="max-width: 20rem;">
+                <div class="card-body">
+                  <h4 class="card-title">PERSONALIZADO</h4>
+                  <h5 class="precio">$450</h5>
+                  <img src="./imagenes/sitckers.png" alt="" width="300" height="400">
+                  <button type="button" class="btn btn-success" >CHAT</button>
+                </div>
+              </div>                            
+        </div>
+        <div id="carrito">
+          <div class="alert alert-dismissible alert-warning">
+            <h2>carrito</h2>
+        </div> 
+        <div class="mi_carrito">
+        </div>
         </section>
-        <form class="formulario">
-          <div class="form-group">
-              <label class="form-label" for="disabledInput"><h2>Ingrese su mail</h2> </label>
-              <input class="form-control" id="mail" type="text" placeholder="ejemplo@gmail.com">
-              <button type="submit" id="enviar_mail" class="btn btn-dark">Enviar mail</button>
-          </div>
-          <div class="espacio_vacio">
-
-
-          </div>
+        <form class="formulario" id="formulario">
+            <label class="form-label" for="disabledInput"><h2>Ingrese su mail</h2> </label>
+            <input class="form-control" id="mail" type="text" placeholder="">
+            <button type="submit" id="enviar_mail" class="btn btn-dark">Enviar mail</button>
+          <div class="resultado"> </div>
         </form>
         <section>
           <video class="video"

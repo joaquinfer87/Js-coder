@@ -50,8 +50,8 @@ h2 {
 
 }
 
-.form-group{
-  width: 100%;
+.formulario{
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,3 +59,11 @@ h2 {
 
 }
 
+.mi_carrito{
+  margin-top: 50px;
+  gap: 50px;
+  display: grid;
+  grid-template: "desc prec x" ;
+  grid-template-columns:auto;
+  grid-template-rows: auto auto auto;
+}
