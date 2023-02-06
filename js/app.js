@@ -18,7 +18,7 @@ function validacionMail() {
 }
 validacionMail();
 
-const cards = document.querySelectorAll(".card");
+const cards = document.querySelectorAll("#card");
 cards.forEach((card) => {
   card.addEventListener("click", (e) => {
     leerDatosProducto(e.target.parentElement);
@@ -79,7 +79,12 @@ function eliminarProducto(e) {
     );
     carritoCompras();
 
-    Swal.fire("Deleted!", "Promocion eliminada", "Hecho");
+    
+    Swal.fire({
+      title: 'Promocion eliminada',
+      icon: 'warning',
+      confirmButtonColor: "#f3969a",
+    });
   }
 }
 
