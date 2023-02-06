@@ -6,21 +6,17 @@ function validacionMail() {
   const mostrarMensaje = formulario.addEventListener("submit", function (e) {
     e.preventDefault();
     if (correo === "") {
-      error();
       resultado.innerHTML = `
-  <div class="alert alert-dismissible alert-warning"><h4><strong>Direccion invalida</strong></h4> </div>`;
+  <div class="alert alert-dismissible alert-warning"><h4><strong>enviares el comprobante de la compra a la direccion ${correo.value}</strong></h4> </div>`;
     } else {
       resultado.innerHTML = `
-      <div class="alert alert-dismissible alert-secondary"> <h4> enviares el comprobante de la compra a la direccion ${correo.value}</h4> </div>
+      <div class="alert alert-dismissible alert-secondary"> <h4>direccion invalida </h4> </div>
       <h4 class="text-secondary">GRACIAS POR TU COMPRA</h4>
       `;
     }
   });
 }
 validacionMail();
-function error() {
-  validacionMail();
-}
 
 const cards = document.querySelectorAll(".card");
 cards.forEach((card) => {
@@ -48,16 +44,24 @@ const carrito = document.querySelector("#carrito");
 function carritoCompras() {
   limpiarHTML();
   articulosCarrito.forEach((producto) => {
-    const sumar = document.createElement("p");
-    sumar.innerHTML = `
+    const row = document.createElement("p");
+    row.innerHTML = `
   <div class="mi_carrito">
   <h5 class="desc">${producto.promocion}</h5>
-  <h5 class="pre">${producto.precio}</h5>
-  <button class="btn btn-dark "  id="${producto.id}"><h5>X</h5></button>
-  </div>
+  <h5 class="prec">${producto.precio}</h5>
+  <button class="btn btn-danger " type="button" id="${producto.id}">X</button>
   </div>
   `;
-    carrito.appendChild(sumar);
+    carrito.appendChild(row);
+
+    Swal.fire({
+      position: 'top-end',
+      title: 'Promocion agregada al carrito',
+      showConfirmButton: false,
+      timer: 600
+    })
+    
+    
   });
 }
 
@@ -68,11 +72,38 @@ function limpiarHTML() {
 carrito.addEventListener("click", eliminarProducto);
 
 function eliminarProducto(e) {
-  if (e.target.classList.contains("btn-dark")) {
+  if (e.target.classList.contains("btn")) {
     let productoID = e.target.getAttribute("id");
     articulosCarrito = articulosCarrito.filter(
       (producto) => producto.id != productoID
     );
     carritoCompras();
+    Swal.fire({
+      title: 'esta seguro que desea eliminar esta promocion??',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'si, eliminela!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Deleted!',
+          'Promocion eliminada',
+          'Hecho'
+        )
+      }
+    })
   }
 }
+
+// function eliminarProducto(e) {
+//   if (e.target.classList.contains("btn")) {
+//     let productoID = e.target.getAttribute("id");
+//     articulosCarrito = articulosCarrito.filter(
+//       (producto) => producto.id !== productoID
+//     );
+//     carritoHTML();
+//   }
+// }

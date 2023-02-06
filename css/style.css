@@ -60,11 +60,13 @@ h2 {
 }
 
 .mi_carrito{
+  width: 100%;
   gap: 30px;
   display: grid;
   grid-template: "desc prec x" ;
   grid-template-columns:auto;
   grid-template-rows: auto auto auto;
+  justify-content: space-between;
 }
 
 .mi_carrito btn{
