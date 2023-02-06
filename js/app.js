@@ -22,6 +22,14 @@ const cards = document.querySelectorAll(".card");
 cards.forEach((card) => {
   card.addEventListener("click", (e) => {
     leerDatosProducto(e.target.parentElement);
+    Toastify({
+      text: "promocion agregada",
+      className: "info",
+      style: {
+        background: "linear-gradient(to right, #f3969a, #f3969a)",
+        
+      }
+    }).showToast();
   });
 });
 
@@ -53,15 +61,7 @@ function carritoCompras() {
   </div>
   `;
     carrito.appendChild(row);
-
-    Swal.fire({
-      position: 'top-end',
-      title: 'Promocion agregada al carrito',
-      showConfirmButton: false,
-      timer: 600
-    })
-    
-    
+   
   });
 }
 
@@ -78,32 +78,9 @@ function eliminarProducto(e) {
       (producto) => producto.id != productoID
     );
     carritoCompras();
-    Swal.fire({
-      title: 'esta seguro que desea eliminar esta promocion??',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'si, eliminela!'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire(
-          'Deleted!',
-          'Promocion eliminada',
-          'Hecho'
-        )
-      }
-    })
+
+    Swal.fire("Deleted!", "Promocion eliminada", "Hecho");
   }
 }
 
-// function eliminarProducto(e) {
-//   if (e.target.classList.contains("btn")) {
-//     let productoID = e.target.getAttribute("id");
-//     articulosCarrito = articulosCarrito.filter(
-//       (producto) => producto.id !== productoID
-//     );
-//     carritoHTML();
-//   }
-// }
+
