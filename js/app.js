@@ -26,7 +26,7 @@ cards.forEach((card) => {
       text: "promocion agregada",
       className: "info",
       style: {
-        background: "linear-gradient(to right, #f3969a, #f3969a)",
+        background: "linear-gradient(to right, #f3969a, #f7c8ca)",
         
       }
     }).showToast();
